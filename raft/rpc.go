@@ -7,7 +7,7 @@ type RequestVote struct {
 	term int
 
 	// candidate requesting vote
-	candidateId int
+	candidateId string
 
 	// index of candidate’s last log entry
 	lastLogIndex int

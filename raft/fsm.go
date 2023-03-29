@@ -1,5 +1,7 @@
 package raft
 
+// LogEntry is the log entry, representing a single operation
+// TODO: consistent with cache operation
 type LogEntry struct {
 }
 
@@ -20,4 +22,10 @@ type State struct {
 	// index of highest log entry known to be
 	//committed
 	commitIndex int
+
+	// previous log index, used for log
+	preLogIndex int
+
+	// previous log term, used for log
+	preLogTerm int
 }
